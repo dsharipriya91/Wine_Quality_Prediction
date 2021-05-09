@@ -12,15 +12,14 @@
 </head>
 
 <body>
- <div class="login">
-	<h1>Wine Quality Prediction</h1>
+ <div class="center">
+	<h1 style="color: green;">Wine Quality Prediction</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Fixed Acidity" required="required" />
-        <input type="text" name="test_score" placeholder="Volatile Acidity" required="required" />
-		<input type="text" name="interview_score" placeholder="Residual Sugar" required="required" />
-
+    	<input type="text" name="volatile_acidity" placeholder="Volatile Acidity" required="required" />
+        <input type="text" name="chlorides" placeholder="Chlorides" required="required" />
+		<input type="text" name="density" placeholder="Density" required="required" />
+		<input type="text" name="alcohol" placeholder="Alcohol" required="required" />
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
